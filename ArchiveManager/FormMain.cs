@@ -1,9 +1,15 @@
 ﻿namespace ArchiveManager {
 	public partial class FormMain : Form {
 
+		#region Members
+
 		private List<RepoListItem> m_repoList = [];
 		private Guid m_repoSelected;
 		private Repository m_repo = new();
+
+		#endregion
+
+		#region Methods
 
 		public FormMain() {
 			InitializeComponent();
@@ -78,12 +84,24 @@
 					CheckedListBox_To.Items.Add(f);
 			}
 			CheckedListBox_To.Visible = true;
+			Button_Replicate.Enabled = true;
 
 			ChooseAll(true);
 			CheckBox_ToState.Checked = true;
 			CheckBox_ToState.Visible = true;
 
 			RefreshRealtime();
+		}
+
+		private void ChooseAll(bool check) {
+			if (CheckedListBox_To.Items.Count > 0) {
+				for (int i = 0, n = CheckedListBox_To.Items.Count; i < n; ++i)
+					CheckedListBox_To.SetItemChecked(i, check);
+				CheckBox_ToState.CheckState = check ? CheckState.Checked : CheckState.Unchecked;
+			}
+			else {
+				CheckBox_ToState.CheckState = CheckState.Unchecked;
+			}
 		}
 
 		private void RefreshChange() {
@@ -109,10 +127,24 @@
 			TextBox_ViewTitle.Text = string.Format(Strings0.FileChanges, list.Count);
 		}
 
+		private void RefreshRealtime() {
+			if (!m_repo.RefreshRealtimeMap())
+				return;
+			RefreshChange();
+		}
+
+		#endregion
+
+		#region Events
+
 		private void FormMain_Load(object sender, EventArgs e) {
 			RepoList.Load();
 			m_repoSelected = Settings0.Default.LastSelectedRepo;
 			UpdateRepoList();
+		}
+
+		private void FormMain_Activated(object sender, EventArgs e) {
+			RefreshRealtime();
 		}
 
 		private void FormMain_FormClosing(object sender, FormClosingEventArgs e) {
@@ -124,20 +156,19 @@
 		private void FormMain_FormClosed(object sender, FormClosedEventArgs e) {
 		}
 
-		private void Button_Replicate_Click(object sender, EventArgs e) {
-			List<string> target = [];
-			for (int i = 0, n = CheckedListBox_To.Items.Count; i < n; i++) {
-				if (CheckedListBox_To.GetItemChecked(i)) {
-					var text = CheckedListBox_To.GetItemText(CheckedListBox_To.Items[i]);
-					if (text != null)
-						target.Add(text);
-				}
-			}
-			m_repo.Replicate(target);
-		}
-
 		private void ComboBox_Repository_SelectedIndexChanged(object sender, EventArgs e) {
 			ChangeCurrentRepo(ComboBox_Repository.SelectedIndex);
+		}
+
+		private void CheckBox_ToState_Click(object sender, EventArgs e) {
+			switch (CheckBox_ToState.CheckState) {
+			case CheckState.Checked:
+				ChooseAll(false);
+				break;
+			default:
+				ChooseAll(true);
+				break;
+			}
 		}
 
 		private void CheckedListBox_To_ItemCheck(object sender, ItemCheckEventArgs e) {
@@ -161,48 +192,34 @@
 				CheckBox_ToState.CheckState = CheckState.Indeterminate;
 		}
 
-		private void ChooseAll(bool check) {
-			if (CheckedListBox_To.Items.Count > 0) {
-				for (int i = 0, n = CheckedListBox_To.Items.Count; i < n; ++i)
-					CheckedListBox_To.SetItemChecked(i, check);
-				CheckBox_ToState.CheckState = check ? CheckState.Checked : CheckState.Unchecked;
-			}
-			else {
-				CheckBox_ToState.CheckState = CheckState.Unchecked;
-			}
-		}
-
-		private void CheckBox_ToState_Click(object sender, EventArgs e) {
-			switch (CheckBox_ToState.CheckState) {
-			case CheckState.Checked:
-				ChooseAll(false);
-				break;
-			default:
-				ChooseAll(true);
-				break;
-			}
-		}
-
 		private void CheckedListBox_To_SelectedIndexChanged(object sender, EventArgs e) {
 			CheckedListBox_To.ClearSelected();
+		}
+
+		private async void Button_Replicate_Click(object sender, EventArgs e) {
+			Button_Replicate.Enabled = false;
+			List<string> target = [];
+			for (int i = 0, n = CheckedListBox_To.Items.Count; i < n; i++) {
+				if (CheckedListBox_To.GetItemChecked(i)) {
+					var text = CheckedListBox_To.GetItemText(CheckedListBox_To.Items[i]);
+					if (text != null)
+						target.Add(text);
+				}
+			}
+			await Task.Run(() => m_repo.Replicate(target));
+			RefreshRealtime();
+			Button_Replicate.Enabled = true;
 		}
 
 		private void exitToolStripMenuItem_Click(object sender, EventArgs e) {
 			Close();
 		}
 
-		private void FormMain_Activated(object sender, EventArgs e) {
-			RefreshRealtime();
-		}
-
-		private void RefreshRealtime() {
-			if (!m_repo.RefreshRealtimeMap())
-				return;
-			RefreshChange();
-		}
-
 		private void StripMenuItem_Refresh_Click(object sender, EventArgs e) {
 			RefreshRealtime();
 		}
+
+		#endregion
+
 	}
 }
