@@ -3,9 +3,7 @@
 namespace ArchiveManager {
 	internal static class RepoList {
 
-		//public static List<RepoListItem> repoList = [];
 		private static Dictionary<Guid, RepoListItem> repoList = [];
-		public static readonly string repoListVersion = "1.0";
 
 		public static bool Add(RepoListItem repository) {
 			return repoList.TryAdd(repository.guid, repository);
@@ -29,14 +27,14 @@ namespace ArchiveManager {
 
 		public static void Load() {
 			try {
-				var doc = XDocument.Load("Repos.xml");
+				var doc = XDocument.Load(Attribute0.Default.ListFilePath);
 				var root = doc.Root;
 				if (root != null) {
 					foreach (var item in root.Elements()) {
-						var guid = item.Attribute("Guid");
-						var name = item.Attribute("Name");
+						var guid = item.Attribute(Attribute0.Default.GuidNote);
+						var name = item.Attribute(Attribute0.Default.NameNote)?.Value;
 						if (guid != null && name != null) {
-							repoList.Add((Guid)guid, new RepoListItem((Guid)guid, (string)name));
+							repoList.Add((Guid)guid, new RepoListItem((Guid)guid, name));
 						}
 					}
 				}
@@ -48,18 +46,18 @@ namespace ArchiveManager {
 
 		public static void Save() {
 			var doc = new XDocument(
-							new XElement("Repos",
-								new XAttribute("Version", repoListVersion),
-								new XAttribute("UTC", DateTime.UtcNow.ToString("s")),
+							new XElement(Attribute0.Default.ListRootNote,
+								new XAttribute(Attribute0.Default.VersionNote, Attribute0.Default.ListVersion),
+								new XAttribute(Attribute0.Default.TimeNote, DateTime.UtcNow.ToString()),
 								repoList.Select(
-									repo => new XElement("Repo",
-										new XAttribute("Guid", repo.Value.guid),
-										new XAttribute("Name", repo.Value.name)
+									repo => new XElement(Attribute0.Default.RepoNote,
+										new XAttribute(Attribute0.Default.GuidNote, repo.Value.guid.ToString()),
+										new XAttribute(Attribute0.Default.NameNote, repo.Value.name)
 									)
 								)
 							)
 						);
-			doc.Save("Repos.xml");
+			doc.Save(Attribute0.Default.ListFilePath);
 		}
 
 	}

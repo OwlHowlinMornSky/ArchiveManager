@@ -59,5 +59,41 @@ namespace ArchiveManager {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   查找类似 Failed to load repository 的本地化字符串。
+        /// </summary>
+        internal static string FailedLoadRepository {
+            get {
+                return ResourceManager.GetString("FailedLoadRepository", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 GUID 的本地化字符串。
+        /// </summary>
+        internal static string GUID {
+            get {
+                return ResourceManager.GetString("GUID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Name 的本地化字符串。
+        /// </summary>
+        internal static string Name {
+            get {
+                return ResourceManager.GetString("Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 No Changes 的本地化字符串。
+        /// </summary>
+        internal static string NoChanges {
+            get {
+                return ResourceManager.GetString("NoChanges", resourceCulture);
+            }
+        }
     }
 }

@@ -11,6 +11,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Update="Attribute0.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Attribute0.settings</DependentUpon>
+    </Compile>
     <Compile Update="Settings0.Designer.cs">
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <AutoGen>True</AutoGen>
@@ -31,6 +36,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Attribute0.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Attribute0.Designer.cs</LastGenOutput>
+    </None>
     <None Update="Settings0.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings0.Designer.cs</LastGenOutput>

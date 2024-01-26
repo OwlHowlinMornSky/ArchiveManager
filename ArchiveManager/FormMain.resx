@@ -117,37 +117,770 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="MenuStrip_Main.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <metadata name="SplitContainer_Main.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="SplitContainer_Main.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="SplitContainer_Main.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 25</value>
+  </data>
   <metadata name="TabControl_Left.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="TabPage_Commit.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="TabPage_Replicate.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="TextBox_Commit.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="CheckedListBox_To.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="CheckedListBox_To.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft YaHei UI, 9pt, style=Bold</value>
+  </data>
+  <data name="CheckedListBox_To.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 40</value>
+  </data>
+  <data name="CheckedListBox_To.Size" type="System.Drawing.Size, System.Drawing">
+    <value>178, 261</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="CheckedListBox_To.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="CheckedListBox_To.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;CheckedListBox_To.Name" xml:space="preserve">
+    <value>CheckedListBox_To</value>
+  </data>
+  <data name="&gt;&gt;CheckedListBox_To.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckedListBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CheckedListBox_To.Parent" xml:space="preserve">
+    <value>GroupBox_ReplicateTo</value>
+  </data>
+  <data name="&gt;&gt;CheckedListBox_To.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="CheckBox_ToState.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
-  <metadata name="Button_Submit.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  </data>
+  <data name="CheckBox_ToState.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="CheckBox_ToState.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 19</value>
+  </data>
+  <data name="CheckBox_ToState.Size" type="System.Drawing.Size, System.Drawing">
+    <value>178, 21</value>
+  </data>
+  <data name="CheckBox_ToState.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="CheckBox_ToState.Text" xml:space="preserve">
+    <value>Check all</value>
+  </data>
+  <data name="CheckBox_ToState.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;CheckBox_ToState.Name" xml:space="preserve">
+    <value>CheckBox_ToState</value>
+  </data>
+  <data name="&gt;&gt;CheckBox_ToState.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CheckBox_ToState.Parent" xml:space="preserve">
+    <value>GroupBox_ReplicateTo</value>
+  </data>
+  <data name="&gt;&gt;CheckBox_ToState.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GroupBox_ReplicateTo.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="GroupBox_ReplicateTo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 54</value>
+  </data>
+  <data name="GroupBox_ReplicateTo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>184, 304</value>
+  </data>
+  <data name="GroupBox_ReplicateTo.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="GroupBox_ReplicateTo.Text" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="&gt;&gt;GroupBox_ReplicateTo.Name" xml:space="preserve">
+    <value>GroupBox_ReplicateTo</value>
+  </data>
+  <data name="&gt;&gt;GroupBox_ReplicateTo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBox_ReplicateTo.Parent" xml:space="preserve">
+    <value>TabPage_Replicate</value>
+  </data>
+  <data name="&gt;&gt;GroupBox_ReplicateTo.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="CheckBox_FromLeader.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
-  <metadata name="TextBox_CommitTitle.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
+  </data>
+  <data name="CheckBox_FromLeader.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="CheckBox_FromLeader.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft YaHei UI, 9pt, style=Bold</value>
+  </data>
+  <data name="CheckBox_FromLeader.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 19</value>
+  </data>
+  <data name="CheckBox_FromLeader.Size" type="System.Drawing.Size, System.Drawing">
+    <value>178, 29</value>
+  </data>
+  <data name="CheckBox_FromLeader.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="CheckBox_FromLeader.Text" xml:space="preserve">
+    <value>[Leader Stream]</value>
+  </data>
+  <data name="&gt;&gt;CheckBox_FromLeader.Name" xml:space="preserve">
+    <value>CheckBox_FromLeader</value>
+  </data>
+  <data name="&gt;&gt;CheckBox_FromLeader.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CheckBox_FromLeader.Parent" xml:space="preserve">
+    <value>GroupBox_ReplicateFrom</value>
+  </data>
+  <data name="&gt;&gt;CheckBox_FromLeader.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GroupBox_ReplicateFrom.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="GroupBox_ReplicateFrom.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="GroupBox_ReplicateFrom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>184, 51</value>
+  </data>
+  <data name="GroupBox_ReplicateFrom.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="GroupBox_ReplicateFrom.Text" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="&gt;&gt;GroupBox_ReplicateFrom.Name" xml:space="preserve">
+    <value>GroupBox_ReplicateFrom</value>
+  </data>
+  <data name="&gt;&gt;GroupBox_ReplicateFrom.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupBox_ReplicateFrom.Parent" xml:space="preserve">
+    <value>TabPage_Replicate</value>
+  </data>
+  <data name="&gt;&gt;GroupBox_ReplicateFrom.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Button_Replicate.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="Button_Replicate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 358</value>
+  </data>
+  <data name="Button_Replicate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>184, 69</value>
+  </data>
+  <data name="Button_Replicate.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="Button_Replicate.Text" xml:space="preserve">
+    <value>Replicate</value>
+  </data>
+  <data name="&gt;&gt;Button_Replicate.Name" xml:space="preserve">
+    <value>Button_Replicate</value>
+  </data>
+  <data name="&gt;&gt;Button_Replicate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Button_Replicate.Parent" xml:space="preserve">
+    <value>TabPage_Replicate</value>
+  </data>
+  <data name="&gt;&gt;Button_Replicate.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="TabPage_Replicate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 26</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="TabPage_Replicate.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="TabPage_Replicate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>190, 430</value>
+  </data>
+  <data name="TabPage_Replicate.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="TabPage_Replicate.Text" xml:space="preserve">
+    <value>Replicate</value>
+  </data>
+  <data name="&gt;&gt;TabPage_Replicate.Name" xml:space="preserve">
+    <value>TabPage_Replicate</value>
+  </data>
+  <data name="&gt;&gt;TabPage_Replicate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TabPage_Replicate.Parent" xml:space="preserve">
+    <value>TabControl_Left</value>
+  </data>
+  <data name="&gt;&gt;TabPage_Replicate.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <metadata name="TabPage_History.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="ListBox_History.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="ListBox_History.ItemHeight" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="ListBox_History.Items" xml:space="preserve">
+    <value>Not Supported Yet</value>
+  </data>
+  <data name="ListBox_History.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="ListBox_History.Size" type="System.Drawing.Size, System.Drawing">
+    <value>184, 424</value>
+  </data>
+  <data name="ListBox_History.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;ListBox_History.Name" xml:space="preserve">
+    <value>ListBox_History</value>
+  </data>
+  <data name="&gt;&gt;ListBox_History.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ListBox_History.Parent" xml:space="preserve">
+    <value>TabPage_History</value>
+  </data>
+  <data name="&gt;&gt;ListBox_History.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="TabPage_History.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 26</value>
+  </data>
+  <data name="TabPage_History.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="TabPage_History.Size" type="System.Drawing.Size, System.Drawing">
+    <value>190, 430</value>
+  </data>
+  <data name="TabPage_History.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="TabPage_History.Text" xml:space="preserve">
+    <value>History</value>
+  </data>
+  <data name="&gt;&gt;TabPage_History.Name" xml:space="preserve">
+    <value>TabPage_History</value>
+  </data>
+  <data name="&gt;&gt;TabPage_History.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TabPage_History.Parent" xml:space="preserve">
+    <value>TabControl_Left</value>
+  </data>
+  <data name="&gt;&gt;TabPage_History.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="TabControl_Left.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="TabControl_Left.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 34</value>
+  </data>
+  <data name="TabControl_Left.Size" type="System.Drawing.Size, System.Drawing">
+    <value>198, 460</value>
+  </data>
+  <data name="TabControl_Left.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;TabControl_Left.Name" xml:space="preserve">
+    <value>TabControl_Left</value>
+  </data>
+  <data name="&gt;&gt;TabControl_Left.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TabControl_Left.Parent" xml:space="preserve">
+    <value>SplitContainer_Main.Panel1</value>
+  </data>
+  <data name="&gt;&gt;TabControl_Left.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ComboBox_Repository.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="ComboBox_Repository.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft YaHei UI, 14.25pt, style=Bold</value>
+  </data>
+  <data name="ComboBox_Repository.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="ComboBox_Repository.Size" type="System.Drawing.Size, System.Drawing">
+    <value>198, 34</value>
+  </data>
+  <data name="ComboBox_Repository.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;ComboBox_Repository.Name" xml:space="preserve">
+    <value>ComboBox_Repository</value>
+  </data>
+  <data name="&gt;&gt;ComboBox_Repository.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ComboBox_Repository.Parent" xml:space="preserve">
+    <value>SplitContainer_Main.Panel1</value>
+  </data>
+  <data name="&gt;&gt;ComboBox_Repository.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;SplitContainer_Main.Panel1.Name" xml:space="preserve">
+    <value>SplitContainer_Main.Panel1</value>
+  </data>
+  <data name="&gt;&gt;SplitContainer_Main.Panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SplitContainer_Main.Panel1.Parent" xml:space="preserve">
+    <value>SplitContainer_Main</value>
+  </data>
+  <data name="&gt;&gt;SplitContainer_Main.Panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="SplitContainer_Main.Panel1MinSize" type="System.Int32, mscorlib">
+    <value>180</value>
+  </data>
+  <metadata name="SplitContainer_View.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="ContextMenuStrip_View.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>373, 17</value>
+  </metadata>
+  <data name="StripMenuItem_Refresh.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 22</value>
+  </data>
+  <data name="StripMenuItem_Refresh.Text" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="ContextMenuStrip_View.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 26</value>
+  </data>
+  <data name="&gt;&gt;ContextMenuStrip_View.Name" xml:space="preserve">
+    <value>ContextMenuStrip_View</value>
+  </data>
+  <data name="&gt;&gt;ContextMenuStrip_View.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="SplitContainer_View.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="SplitContainer_View.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 100</value>
+  </data>
+  <data name="ListBox_Changes.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="ListBox_Changes.ItemHeight" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="ListBox_Changes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="ListBox_Changes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>194, 394</value>
+  </data>
+  <data name="ListBox_Changes.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;ListBox_Changes.Name" xml:space="preserve">
+    <value>ListBox_Changes</value>
+  </data>
+  <data name="&gt;&gt;ListBox_Changes.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ListBox_Changes.Parent" xml:space="preserve">
+    <value>SplitContainer_View.Panel1</value>
+  </data>
+  <data name="&gt;&gt;ListBox_Changes.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;SplitContainer_View.Panel1.Name" xml:space="preserve">
+    <value>SplitContainer_View.Panel1</value>
+  </data>
+  <data name="&gt;&gt;SplitContainer_View.Panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SplitContainer_View.Panel1.Parent" xml:space="preserve">
+    <value>SplitContainer_View</value>
+  </data>
+  <data name="&gt;&gt;SplitContainer_View.Panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="SplitContainer_View.Panel1MinSize" type="System.Int32, mscorlib">
+    <value>125</value>
+  </data>
+  <data name="&gt;&gt;SplitContainer_View.Panel2.Name" xml:space="preserve">
+    <value>SplitContainer_View.Panel2</value>
+  </data>
+  <data name="&gt;&gt;SplitContainer_View.Panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SplitContainer_View.Panel2.Parent" xml:space="preserve">
+    <value>SplitContainer_View</value>
+  </data>
+  <data name="&gt;&gt;SplitContainer_View.Panel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="SplitContainer_View.Panel2MinSize" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="SplitContainer_View.Size" type="System.Drawing.Size, System.Drawing">
+    <value>590, 396</value>
+  </data>
+  <data name="SplitContainer_View.SplitterDistance" type="System.Int32, mscorlib">
+    <value>196</value>
+  </data>
+  <data name="SplitContainer_View.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;SplitContainer_View.Name" xml:space="preserve">
+    <value>SplitContainer_View</value>
+  </data>
+  <data name="&gt;&gt;SplitContainer_View.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SplitContainer_View.Parent" xml:space="preserve">
+    <value>SplitContainer_Main.Panel2</value>
+  </data>
+  <data name="&gt;&gt;SplitContainer_View.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <metadata name="Panel_ViewTop.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="TextBox_ViewInfo.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="TextBox_ViewInfo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 21</value>
+  </data>
+  <data name="TextBox_ViewInfo.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TextBox_ViewInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>588, 77</value>
+  </data>
+  <data name="TextBox_ViewInfo.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;TextBox_ViewInfo.Name" xml:space="preserve">
+    <value>TextBox_ViewInfo</value>
+  </data>
+  <data name="&gt;&gt;TextBox_ViewInfo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TextBox_ViewInfo.Parent" xml:space="preserve">
+    <value>Panel_ViewTop</value>
+  </data>
+  <data name="&gt;&gt;TextBox_ViewInfo.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="TextBox_ViewTitle.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="TextBox_ViewTitle.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft YaHei UI, 12pt, style=Bold</value>
+  </data>
+  <data name="TextBox_ViewTitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="TextBox_ViewTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>588, 21</value>
+  </data>
+  <data name="TextBox_ViewTitle.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;TextBox_ViewTitle.Name" xml:space="preserve">
+    <value>TextBox_ViewTitle</value>
+  </data>
+  <data name="&gt;&gt;TextBox_ViewTitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TextBox_ViewTitle.Parent" xml:space="preserve">
+    <value>Panel_ViewTop</value>
+  </data>
+  <data name="&gt;&gt;TextBox_ViewTitle.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Panel_ViewTop.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="Panel_ViewTop.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="Panel_ViewTop.Size" type="System.Drawing.Size, System.Drawing">
+    <value>590, 100</value>
+  </data>
+  <data name="Panel_ViewTop.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;Panel_ViewTop.Name" xml:space="preserve">
+    <value>Panel_ViewTop</value>
+  </data>
+  <data name="&gt;&gt;Panel_ViewTop.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Panel_ViewTop.Parent" xml:space="preserve">
+    <value>SplitContainer_Main.Panel2</value>
+  </data>
+  <data name="&gt;&gt;Panel_ViewTop.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;SplitContainer_Main.Panel2.Name" xml:space="preserve">
+    <value>SplitContainer_Main.Panel2</value>
+  </data>
+  <data name="&gt;&gt;SplitContainer_Main.Panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SplitContainer_Main.Panel2.Parent" xml:space="preserve">
+    <value>SplitContainer_Main</value>
+  </data>
+  <data name="&gt;&gt;SplitContainer_Main.Panel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="SplitContainer_Main.Panel2MinSize" type="System.Int32, mscorlib">
+    <value>240</value>
+  </data>
+  <data name="SplitContainer_Main.Size" type="System.Drawing.Size, System.Drawing">
+    <value>794, 496</value>
+  </data>
+  <data name="SplitContainer_Main.SplitterDistance" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
+  <data name="SplitContainer_Main.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;SplitContainer_Main.Name" xml:space="preserve">
+    <value>SplitContainer_Main</value>
+  </data>
+  <data name="&gt;&gt;SplitContainer_Main.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SplitContainer_Main.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;SplitContainer_Main.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="MenuStrip_Main.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="newRepositoryToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>198, 22</value>
+  </data>
+  <data name="newRepositoryToolStripMenuItem.Text" xml:space="preserve">
+    <value>New repository</value>
+  </data>
+  <data name="manageRepositoriesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>198, 22</value>
+  </data>
+  <data name="manageRepositoriesToolStripMenuItem.Text" xml:space="preserve">
+    <value>Manage repositories</value>
+  </data>
+  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>195, 6</value>
+  </data>
+  <data name="exitToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>198, 22</value>
+  </data>
+  <data name="exitToolStripMenuItem.Text" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 21</value>
+  </data>
+  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="renameRepositoryToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>187, 22</value>
+  </data>
+  <data name="renameRepositoryToolStripMenuItem.Text" xml:space="preserve">
+    <value>Rename repository</value>
+  </data>
+  <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>184, 6</value>
+  </data>
+  <data name="manageStreamsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>187, 22</value>
+  </data>
+  <data name="manageStreamsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Manage streams</value>
+  </data>
+  <data name="editToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 21</value>
+  </data>
+  <data name="editToolStripMenuItem.Text" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="aboutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 22</value>
+  </data>
+  <data name="aboutToolStripMenuItem.Text" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="helpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 21</value>
+  </data>
+  <data name="helpToolStripMenuItem.Text" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="MenuStrip_Main.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="MenuStrip_Main.Size" type="System.Drawing.Size, System.Drawing">
+    <value>794, 25</value>
+  </data>
+  <data name="MenuStrip_Main.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="MenuStrip_Main.Text" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="&gt;&gt;MenuStrip_Main.Name" xml:space="preserve">
+    <value>MenuStrip_Main</value>
+  </data>
+  <data name="&gt;&gt;MenuStrip_Main.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuStrip_Main.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;MenuStrip_Main.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <metadata name="FolderBrowserDialog_Add.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>166, 17</value>
+  </metadata>
+  <data name="FolderBrowserDialog_Add.Description" xml:space="preserve">
+    <value>Add stream</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
   <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 17</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>794, 521</value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>640, 320</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>ArchiveManager</value>
+  </data>
+  <data name="&gt;&gt;StripMenuItem_Refresh.Name" xml:space="preserve">
+    <value>StripMenuItem_Refresh</value>
+  </data>
+  <data name="&gt;&gt;StripMenuItem_Refresh.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fileToolStripMenuItem.Name" xml:space="preserve">
+    <value>fileToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;fileToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;newRepositoryToolStripMenuItem.Name" xml:space="preserve">
+    <value>newRepositoryToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;newRepositoryToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;manageRepositoriesToolStripMenuItem.Name" xml:space="preserve">
+    <value>manageRepositoriesToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;manageRepositoriesToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
+    <value>toolStripSeparator1</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;exitToolStripMenuItem.Name" xml:space="preserve">
+    <value>exitToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;exitToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;editToolStripMenuItem.Name" xml:space="preserve">
+    <value>editToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;editToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;renameRepositoryToolStripMenuItem.Name" xml:space="preserve">
+    <value>renameRepositoryToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;renameRepositoryToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator2.Name" xml:space="preserve">
+    <value>toolStripSeparator2</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;manageStreamsToolStripMenuItem.Name" xml:space="preserve">
+    <value>manageStreamsToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;manageStreamsToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;helpToolStripMenuItem.Name" xml:space="preserve">
+    <value>helpToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;helpToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;aboutToolStripMenuItem.Name" xml:space="preserve">
+    <value>aboutToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;aboutToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FolderBrowserDialog_Add.Name" xml:space="preserve">
+    <value>FolderBrowserDialog_Add</value>
+  </data>
+  <data name="&gt;&gt;FolderBrowserDialog_Add.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FolderBrowserDialog, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FormMain</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

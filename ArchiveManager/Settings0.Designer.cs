@@ -34,5 +34,17 @@ namespace ArchiveManager {
                 this["LastSelectedRepo"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string LastSelectedStream {
+            get {
+                return ((string)(this["LastSelectedStream"]));
+            }
+            set {
+                this["LastSelectedStream"] = value;
+            }
+        }
     }
 }
