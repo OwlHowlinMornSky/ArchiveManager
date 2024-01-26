@@ -78,6 +78,8 @@ namespace ArchiveManager {
 					)
 				)
 			);
+			if (!Directory.Exists(Attribute0.Default.RepoDirectory))
+				Directory.CreateDirectory(Attribute0.Default.RepoDirectory);
 			doc.Save(Path.Combine(Attribute0.Default.RepoDirectory, Attribute0.Default.ListFileName));
 		}
 

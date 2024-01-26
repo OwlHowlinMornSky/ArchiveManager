@@ -99,6 +99,8 @@ namespace ArchiveManager {
 					)
 				)
 			);
+			if (!Directory.Exists(m_myDir))
+				Directory.CreateDirectory(m_myDir);
 			doc.Save(Path.Combine(m_myDir, Attribute0.Default.RepoFileName));
 		}
 
@@ -190,6 +192,8 @@ namespace ArchiveManager {
 					)
 				)
 			);
+			if (!Directory.Exists(filepath))
+				Directory.CreateDirectory(filepath);
 			doc.Save(Path.Combine(filepath, Attribute0.Default.StreamInfoFile));
 		}
 
