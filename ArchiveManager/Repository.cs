@@ -7,6 +7,9 @@ namespace ArchiveManager {
 		private Dictionary<string, string> m_streamList = [];
 		private string m_leader = "";
 
+		private Dictionary<string, DateTime> m_leaderStorage = [];
+		private Dictionary<string, DateTime> m_leaderRealtime = [];
+
 		public void Clear() {
 			m_info = new();
 			m_streamList.Clear();

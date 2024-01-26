@@ -5,9 +5,6 @@
 		private Guid m_repoSelected;
 		private Repository m_repo = new();
 
-		private Dictionary<string, DateTime> m_leaderStorage = [];
-		private Dictionary<string, DateTime> m_leaderRealtime = [];
-
 		public FormMain() {
 			InitializeComponent();
 		}
