@@ -206,7 +206,11 @@
 						target.Add(text);
 				}
 			}
+			if (target.Count <= 0)
+				return;
+			//GUI.test?.Show(this);
 			await Task.Run(() => m_repo.Replicate(target));
+			//GUI.test?.Close();
 			RefreshRealtime();
 			Button_Replicate.Enabled = true;
 		}

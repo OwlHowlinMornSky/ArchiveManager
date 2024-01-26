@@ -211,8 +211,12 @@ namespace ArchiveManager {
 			if (!m_available)
 				return;
 			RefreshRealtimeMap();
+			if (targetStreams.Count <= 0)
+				return;
 			SaveStorage(m_leader, m_leaderRealtime);
 			m_leaderStorage = new(m_leaderRealtime);
+
+			//GUI.test?.AddText("TEST");
 
 			if (!m_streamList.TryGetValue(m_leader, out var srcDir)) {
 				return;
@@ -221,6 +225,9 @@ namespace ArchiveManager {
 				if (!m_streamList.TryGetValue(stream, out var dstDir)) {
 					continue;
 				}
+
+				//GUI.test?.AddText(stream);
+
 				if (!LoadStorage(stream, out var targetStorage)) {
 					continue;
 				}
@@ -262,6 +269,10 @@ namespace ArchiveManager {
 				if (success)
 					SaveStorage(stream, m_leaderRealtime);
 			}
+
+			//Thread.Sleep(5000);
+
+			//GUI.test?.UseOver();
 		}
 
 		public static List<FileChange> CompareMap(
