@@ -25,7 +25,7 @@ namespace ArchiveManager {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Repos\\")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Repo\\")]
         public string RepoDirectory {
             get {
                 return ((string)(this["RepoDirectory"]));
@@ -34,10 +34,10 @@ namespace ArchiveManager {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute(".ohms-archive\\")]
-        public string StreamInfoDir {
+        [global::System.Configuration.DefaultSettingValueAttribute(".ohmsarchive")]
+        public string StreamInfoFile {
             get {
-                return ((string)(this["StreamInfoDir"]));
+                return ((string)(this["StreamInfoFile"]));
             }
         }
         
@@ -62,9 +62,9 @@ namespace ArchiveManager {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("Repos.xml")]
-        public string ListFilePath {
+        public string ListFileName {
             get {
-                return ((string)(this["ListFilePath"]));
+                return ((string)(this["ListFileName"]));
             }
         }
         
@@ -142,10 +142,10 @@ namespace ArchiveManager {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute(".xml")]
-        public string RepoFileExname {
+        [global::System.Configuration.DefaultSettingValueAttribute("Repo.xml")]
+        public string RepoFileName {
             get {
-                return ((string)(this["RepoFileExname"]));
+                return ((string)(this["RepoFileName"]));
             }
         }
         
@@ -155,6 +155,15 @@ namespace ArchiveManager {
         public string LeaderNote {
             get {
                 return ((string)(this["LeaderNote"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1.0")]
+        public string StreamVersion {
+            get {
+                return ((string)(this["StreamVersion"]));
             }
         }
     }

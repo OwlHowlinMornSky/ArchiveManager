@@ -27,7 +27,7 @@ namespace ArchiveManager {
 
 		public static void Load() {
 			try {
-				var doc = XDocument.Load(Attribute0.Default.ListFilePath);
+				var doc = XDocument.Load(Path.Combine(Attribute0.Default.RepoDirectory, Attribute0.Default.ListFileName));
 				var root = doc.Root;
 				if (root != null) {
 					foreach (var item in root.Elements()) {
@@ -46,18 +46,18 @@ namespace ArchiveManager {
 
 		public static void Save() {
 			var doc = new XDocument(
-							new XElement(Attribute0.Default.ListRootNote,
-								new XAttribute(Attribute0.Default.VersionNote, Attribute0.Default.ListVersion),
-								new XAttribute(Attribute0.Default.TimeNote, DateTime.UtcNow.ToString()),
-								repoList.Select(
-									repo => new XElement(Attribute0.Default.RepoNote,
-										new XAttribute(Attribute0.Default.GuidNote, repo.Value.guid.ToString()),
-										new XAttribute(Attribute0.Default.NameNote, repo.Value.name)
-									)
-								)
-							)
-						);
-			doc.Save(Attribute0.Default.ListFilePath);
+				new XElement(Attribute0.Default.ListRootNote,
+					new XAttribute(Attribute0.Default.VersionNote, Attribute0.Default.ListVersion),
+					new XAttribute(Attribute0.Default.TimeNote, DateTime.UtcNow.ToString()),
+					repoList.Select(
+						repo => new XElement(Attribute0.Default.RepoNote,
+							new XAttribute(Attribute0.Default.GuidNote, repo.Value.guid.ToString()),
+							new XAttribute(Attribute0.Default.NameNote, repo.Value.name)
+						)
+					)
+				)
+			);
+			doc.Save(Path.Combine(Attribute0.Default.RepoDirectory, Attribute0.Default.ListFileName));
 		}
 
 	}

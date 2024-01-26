@@ -70,6 +70,15 @@ namespace ArchiveManager {
         }
         
         /// <summary>
+        ///   查找类似  {0} changed files 的本地化字符串。
+        /// </summary>
+        internal static string FileChanges {
+            get {
+                return ResourceManager.GetString("FileChanges", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 GUID 的本地化字符串。
         /// </summary>
         internal static string GUID {

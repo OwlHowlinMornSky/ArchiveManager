@@ -36,46 +36,77 @@
 			CheckedListBox_To.Visible = false;
 			CheckedListBox_To.Items.Clear();
 			Button_Replicate.Enabled = false;
+			ClearChangeGUI();
+		}
+
+		private void ClearChangeGUI() {
 			TextBox_ViewTitle.Text = Strings0.NoChanges;
+			TextBox_ViewInfo.Text = "";
+			ListBox_Changes.Items.Clear();
 		}
 
 		private void ChangeCurrentRepo(int index) {
-			if (index >= 0) {
-				if (m_repo.GetGuid() != m_repoList[index].guid) {
-					if (!m_repo.Load(m_repoList[index])) {
-						ClearCurrentRepo();
-						MessageBox.Show(
-							Strings0.Name + ": " + m_repoList[index].name + "\n" +
-							Strings0.GUID + ": " + m_repoList[index].guid,
-							Strings0.FailedLoadRepository,
-							MessageBoxButtons.OK,
-							MessageBoxIcon.Error
-						);
-						return;
-					}
+			if (index < 0 || m_repoList.Count <= index)
+				return;
+			if (m_repo.GetGuid() == m_repoList[index].guid)
+				return;
+			if (!m_repo.Load(m_repoList[index])) {
+				ClearCurrentRepo();
+				MessageBox.Show(
+					Strings0.Name + ": " + m_repoList[index].name + "\n" +
+					Strings0.GUID + ": " + m_repoList[index].guid,
+					Strings0.FailedLoadRepository,
+					MessageBoxButtons.OK,
+					MessageBoxIcon.Error
+				);
+				return;
+			}
 
-					if (ComboBox_Repository.SelectedIndex != index)
-						ComboBox_Repository.SelectedIndex = index;
+			if (ComboBox_Repository.SelectedIndex != index)
+				ComboBox_Repository.SelectedIndex = index;
 
-					m_repoSelected = m_repoList[index].guid;
+			m_repoSelected = m_repoList[index].guid;
 
-					CheckBox_FromLeader.Text = m_repo.GetLeaderName();
-					CheckBox_FromLeader.Visible = true;
+			CheckBox_FromLeader.Text = m_repo.GetLeaderName();
+			CheckBox_FromLeader.Visible = true;
 
-					CheckedListBox_To.Items.Clear();
-					{
-						var list = m_repo.GetFollowersName();
-						list.Sort(Util.StrCmpLogicalW);
-						foreach (var f in list)
-							CheckedListBox_To.Items.Add(f);
-					}
-					CheckedListBox_To.Visible = true;
+			CheckedListBox_To.Items.Clear();
+			{
+				var list = m_repo.GetFollowersName();
+				list.Sort(Util.StrCmpLogicalW);
+				foreach (var f in list)
+					CheckedListBox_To.Items.Add(f);
+			}
+			CheckedListBox_To.Visible = true;
 
-					ChooseAll(true);
-					CheckBox_ToState.Checked = true;
-					CheckBox_ToState.Visible = true;
+			ChooseAll(true);
+			CheckBox_ToState.Checked = true;
+			CheckBox_ToState.Visible = true;
+
+			RefreshRealtime();
+		}
+
+		private void RefreshChange() {
+			var list = m_repo.GetLeaderChanges();
+			if (list.Count == 0) {
+				ClearChangeGUI();
+				return;
+			}
+			ListBox_Changes.Items.Clear();
+			foreach (var f in list) {
+				switch (f.type) {
+				case FileChange.Type.Add:
+					ListBox_Changes.Items.Add("[A] " + f.path);
+					break;
+				case FileChange.Type.Modified:
+					ListBox_Changes.Items.Add("[M] " + f.path);
+					break;
+				case FileChange.Type.Deleted:
+					ListBox_Changes.Items.Add("[D] " + f.path);
+					break;
 				}
 			}
+			TextBox_ViewTitle.Text = string.Format(Strings0.FileChanges, list.Count);
 		}
 
 		private void FormMain_Load(object sender, EventArgs e) {
@@ -94,7 +125,15 @@
 		}
 
 		private void Button_Replicate_Click(object sender, EventArgs e) {
-
+			List<string> target = [];
+			for (int i = 0, n = CheckedListBox_To.Items.Count; i < n; i++) {
+				if (CheckedListBox_To.GetItemChecked(i)) {
+					var text = CheckedListBox_To.GetItemText(CheckedListBox_To.Items[i]);
+					if (text != null)
+						target.Add(text);
+				}
+			}
+			m_repo.Replicate(target);
 		}
 
 		private void ComboBox_Repository_SelectedIndexChanged(object sender, EventArgs e) {
@@ -150,6 +189,20 @@
 
 		private void exitToolStripMenuItem_Click(object sender, EventArgs e) {
 			Close();
+		}
+
+		private void FormMain_Activated(object sender, EventArgs e) {
+			RefreshRealtime();
+		}
+
+		private void RefreshRealtime() {
+			if (!m_repo.RefreshRealtimeMap())
+				return;
+			RefreshChange();
+		}
+
+		private void StripMenuItem_Refresh_Click(object sender, EventArgs e) {
+			RefreshRealtime();
 		}
 	}
 }

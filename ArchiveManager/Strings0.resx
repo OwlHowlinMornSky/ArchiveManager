@@ -120,6 +120,9 @@
   <data name="FailedLoadRepository" xml:space="preserve">
     <value>Failed to load repository</value>
   </data>
+  <data name="FileChanges" xml:space="preserve">
+    <value> {0} changed files</value>
+  </data>
   <data name="GUID" xml:space="preserve">
     <value>GUID</value>
   </data>

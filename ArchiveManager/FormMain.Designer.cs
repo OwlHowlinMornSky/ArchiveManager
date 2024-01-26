@@ -206,6 +206,7 @@
 			// 
 			StripMenuItem_Refresh.Name = "StripMenuItem_Refresh";
 			resources.ApplyResources(StripMenuItem_Refresh, "StripMenuItem_Refresh");
+			StripMenuItem_Refresh.Click += StripMenuItem_Refresh_Click;
 			// 
 			// ListBox_Changes
 			// 
@@ -216,7 +217,7 @@
 			// 
 			// Panel_ViewTop
 			// 
-			Panel_ViewTop.BackColor = SystemColors.Control;
+			Panel_ViewTop.BackColor = SystemColors.Window;
 			Panel_ViewTop.BorderStyle = BorderStyle.FixedSingle;
 			Panel_ViewTop.Controls.Add(TextBox_ViewInfo);
 			Panel_ViewTop.Controls.Add(TextBox_ViewTitle);
@@ -317,6 +318,7 @@
 			Controls.Add(MenuStrip_Main);
 			MainMenuStrip = MenuStrip_Main;
 			Name = "FormMain";
+			Activated += FormMain_Activated;
 			FormClosing += FormMain_FormClosing;
 			FormClosed += FormMain_FormClosed;
 			Load += FormMain_Load;

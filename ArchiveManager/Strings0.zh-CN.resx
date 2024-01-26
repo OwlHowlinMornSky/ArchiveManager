@@ -120,6 +120,9 @@
   <data name="FailedLoadRepository" xml:space="preserve">
     <value>加载仓库失败</value>
   </data>
+  <data name="FileChanges" xml:space="preserve">
+    <value> {0} 项文件变化</value>
+  </data>
   <data name="GUID" xml:space="preserve">
     <value>GUID</value>
   </data>
