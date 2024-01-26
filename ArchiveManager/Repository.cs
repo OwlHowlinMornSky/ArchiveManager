@@ -212,6 +212,7 @@ namespace ArchiveManager {
 				return;
 			RefreshRealtimeMap();
 			SaveStorage(m_leader, m_leaderRealtime);
+			m_leaderStorage = new(m_leaderRealtime);
 
 			if (!m_streamList.TryGetValue(m_leader, out var srcDir)) {
 				return;
@@ -231,18 +232,10 @@ namespace ArchiveManager {
 					try {
 						//str += change.type.ToString() + " " + change.path + "\n\r";
 						string dstFile = Path.Combine(dstDir, change.path);
-						string? dstFolder = Path.GetDirectoryName(dstFile);
 						switch (change.type) {
 						case FileChange.Type.Add:
-							if (dstFolder != null && !Directory.Exists(dstFolder))
-								Directory.CreateDirectory(dstFolder);
-							File.Copy(
-								Path.Combine(srcDir, change.path),
-								dstFile,
-								true
-							);
-							break;
 						case FileChange.Type.Modified:
+							string? dstFolder = Path.GetDirectoryName(dstFile);
 							if (dstFolder != null && !Directory.Exists(dstFolder))
 								Directory.CreateDirectory(dstFolder);
 							File.Copy(
@@ -269,8 +262,6 @@ namespace ArchiveManager {
 				if (success)
 					SaveStorage(stream, m_leaderRealtime);
 			}
-			LoadStorage(m_leader, out m_leaderStorage);
-			RefreshRealtimeMap();
 		}
 
 		public static List<FileChange> CompareMap(
@@ -292,6 +283,19 @@ namespace ArchiveManager {
 				res.Add(new(FileChange.Type.Deleted, k.Key));
 			}
 			return res;
+		}
+
+		public void KillEmptyDirectory(string stream) {
+			if (!m_streamList.TryGetValue(stream, out var dstDir)) {
+				return;
+			}
+			DirectoryInfo dir = new(dstDir);
+			var subdirs = dir.GetDirectories("", SearchOption.AllDirectories);
+			foreach (var subdir in subdirs) {
+				if (subdir.GetFileSystemInfos().Length == 0) {
+					subdir.Delete();
+				}
+			}
 		}
 
 	}
