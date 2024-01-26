@@ -225,38 +225,49 @@ namespace ArchiveManager {
 				}
 				var diff = CompareMap(targetStorage, m_leaderRealtime);
 
-				string str = "";
+				bool success = true;
+				//string str = "";
 				foreach (var change in diff) {
-					str += change.type.ToString() + " " + change.path + "\n\r";
-					string dstFile = Path.Combine(dstDir, change.path);
-					string? dstFolder = Path.GetDirectoryName(dstFile);
-					switch (change.type) {
-					case FileChange.Type.Add:
-						if (dstFolder != null && !Directory.Exists(dstFolder))
-							Directory.CreateDirectory(dstFolder);
-						File.Copy(
-							Path.Combine(srcDir, change.path),
-							dstFile,
-							true
-						);
-						break;
-					case FileChange.Type.Modified:
-						File.Copy(
-							Path.Combine(srcDir, change.path),
-							dstFile,
-							true
-						);
-						break;
-					case FileChange.Type.Deleted:
-						File.Delete(
-							dstFile
-						);
+					try {
+						//str += change.type.ToString() + " " + change.path + "\n\r";
+						string dstFile = Path.Combine(dstDir, change.path);
+						string? dstFolder = Path.GetDirectoryName(dstFile);
+						switch (change.type) {
+						case FileChange.Type.Add:
+							if (dstFolder != null && !Directory.Exists(dstFolder))
+								Directory.CreateDirectory(dstFolder);
+							File.Copy(
+								Path.Combine(srcDir, change.path),
+								dstFile,
+								true
+							);
+							break;
+						case FileChange.Type.Modified:
+							if (dstFolder != null && !Directory.Exists(dstFolder))
+								Directory.CreateDirectory(dstFolder);
+							File.Copy(
+								Path.Combine(srcDir, change.path),
+								dstFile,
+								true
+							);
+							break;
+						case FileChange.Type.Deleted:
+							if (File.Exists(dstFile))
+								File.Delete(
+									dstFile
+								);
+							break;
+						}
+					}
+					catch {
+						success = false;
 						break;
 					}
 				}
-				MessageBox.Show(str);
+				//MessageBox.Show(str);
 
-				SaveStorage(stream, m_leaderRealtime);
+				if (success)
+					SaveStorage(stream, m_leaderRealtime);
 			}
 			LoadStorage(m_leader, out m_leaderStorage);
 			RefreshRealtimeMap();
