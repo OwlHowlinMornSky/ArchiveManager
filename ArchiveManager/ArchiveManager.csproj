@@ -26,12 +26,21 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Strings0.resx</DependentUpon>
     </Compile>
+    <Compile Update="StringsNewRepo.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>StringsNewRepo.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Update="Strings0.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Strings0.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="StringsNewRepo.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>StringsNewRepo.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
 

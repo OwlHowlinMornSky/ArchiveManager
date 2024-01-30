@@ -109,7 +109,6 @@ namespace ArchiveManager {
 			Button_Replicate.Enabled = true;
 
 			ChooseAll(true);
-			CheckBox_ToState.Checked = true;
 			CheckBox_ToState.Visible = true;
 
 			RefreshRealtime();
@@ -247,5 +246,12 @@ namespace ArchiveManager {
 
 		#endregion
 
+		private void newRepositoryToolStripMenuItem_Click(object sender, EventArgs e) {
+			var dialog = new FormNewRepo();
+			var res = dialog.ShowDialog(this);
+			if(res == DialogResult.OK) {
+				UpdateRepoList();
+			}
+		}
 	}
 }

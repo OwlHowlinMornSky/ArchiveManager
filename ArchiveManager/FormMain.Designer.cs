@@ -256,6 +256,7 @@
 			// 
 			newRepositoryToolStripMenuItem.Name = "newRepositoryToolStripMenuItem";
 			resources.ApplyResources(newRepositoryToolStripMenuItem, "newRepositoryToolStripMenuItem");
+			newRepositoryToolStripMenuItem.Click += newRepositoryToolStripMenuItem_Click;
 			// 
 			// manageRepositoriesToolStripMenuItem
 			// 

@@ -19,6 +19,7 @@
 * @Authors
 *    Tyler Parret True <mysteryworldgod@outlook.com><https://github.com/OwlHowlinMornSky>
 */
+using System.IO;
 using System.Xml.Linq;
 
 namespace ArchiveManager {
@@ -34,6 +35,26 @@ namespace ArchiveManager {
 		private string m_myDir = "";
 
 		private bool m_available = false;
+
+		public static bool Create(Guid guid, string name, string leadername, string leaderpath) {
+			Repository repository = new() {
+				m_info = new(guid, name),
+				m_leader = leadername,
+				m_available = true,
+				m_myDir = Path.Combine(Attribute0.Default.RepoDirectory, guid.ToString())
+			};
+
+			if (!repository.m_streamList.TryAdd(leadername, leaderpath)) {
+				return false;
+			}
+
+			repository.RefreshRealtimeMap();
+			repository.SaveStorage(leadername, repository.m_leaderRealtime);
+
+			repository.Save();
+
+			return true;
+		}
 
 		public void Clear() {
 			m_available = false;
@@ -61,12 +82,18 @@ namespace ArchiveManager {
 					return false;
 				m_leader = lead.Value;
 
+				bool ok = true;
 				foreach (var st in root.Elements(Attribute0.Default.StreamNote)) {
 					var name = st.Attribute(Attribute0.Default.NameNote)?.Value;
 					var path = st.Attribute(Attribute0.Default.PathNote)?.Value;
 					if (path != null && name != null) {
-						m_streamList.Add(name, path);
+						ok = m_streamList.TryAdd(name, path) && ok;
 					}
+					else {
+						ok = false;
+					}
+					if (!ok)
+						return false;
 				}
 
 				if (!m_streamList.ContainsKey(m_leader))
@@ -99,7 +126,7 @@ namespace ArchiveManager {
 					)
 				)
 			);
-			if (!Directory.Exists(m_myDir))
+			if (m_myDir.Length > 0 && !Directory.Exists(m_myDir))
 				Directory.CreateDirectory(m_myDir);
 			doc.Save(Path.Combine(m_myDir, Attribute0.Default.RepoFileName));
 		}
