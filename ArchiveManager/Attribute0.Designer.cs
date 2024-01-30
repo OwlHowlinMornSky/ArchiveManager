@@ -142,7 +142,7 @@ namespace ArchiveManager {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Repo.xml")]
+        [global::System.Configuration.DefaultSettingValueAttribute(".ohmsrepo")]
         public string RepoFileName {
             get {
                 return ((string)(this["RepoFileName"]));

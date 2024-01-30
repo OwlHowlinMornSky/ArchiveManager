@@ -104,5 +104,14 @@ namespace ArchiveManager {
                 return ResourceManager.GetString("NoChanges", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   查找类似 Not Implemented Yet. 的本地化字符串。
+        /// </summary>
+        internal static string NotImplemented {
+            get {
+                return ResourceManager.GetString("NotImplemented", resourceCulture);
+            }
+        }
     }
 }

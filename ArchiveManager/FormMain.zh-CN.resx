@@ -134,16 +134,13 @@
     <value>源</value>
   </data>
   <data name="CheckBox_FromLeader.Text" xml:space="preserve">
-    <value>[领头流]</value>
+    <value>[领流]</value>
   </data>
   <data name="Button_Replicate.Text" xml:space="preserve">
     <value>复刻</value>
   </data>
   <data name="TabPage_History.Text" xml:space="preserve">
     <value>历史</value>
-  </data>
-  <data name="ListBox_History.Items" xml:space="preserve">
-    <value>尚未实现</value>
   </data>
   <data name="StripMenuItem_Refresh.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 22</value>

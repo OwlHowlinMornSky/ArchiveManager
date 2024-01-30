@@ -37,6 +37,15 @@ namespace ArchiveManager {
 			InitializeComponent();
 		}
 
+		private void NotImplemented() {
+			MessageBox.Show(
+				Strings0.NotImplemented,
+				Text,
+				MessageBoxButtons.OK,
+				MessageBoxIcon.Information
+			);
+		}
+
 		private void UpdateRepoList() {
 			ComboBox_Repository.Items.Clear();
 			m_repoList = RepoList.GetAll();
@@ -162,6 +171,8 @@ namespace ArchiveManager {
 			RepoList.Load();
 			m_repoSelected = Settings0.Default.LastSelectedRepo;
 			UpdateRepoList();
+
+			ListBox_History.Items.Add(Strings0.NotImplemented);
 		}
 
 		private void FormMain_Activated(object sender, EventArgs e) {
@@ -249,9 +260,26 @@ namespace ArchiveManager {
 		private void newRepositoryToolStripMenuItem_Click(object sender, EventArgs e) {
 			var dialog = new FormNewRepo();
 			var res = dialog.ShowDialog(this);
-			if(res == DialogResult.OK) {
+			if (res == DialogResult.OK) {
 				UpdateRepoList();
 			}
 		}
+
+		private void manageRepositoriesToolStripMenuItem_Click(object sender, EventArgs e) {
+			NotImplemented();
+		}
+
+		private void renameRepositoryToolStripMenuItem_Click(object sender, EventArgs e) {
+			NotImplemented();
+		}
+
+		private void manageStreamsToolStripMenuItem_Click(object sender, EventArgs e) {
+			NotImplemented();
+		}
+
+		private void aboutToolStripMenuItem_Click(object sender, EventArgs e) {
+			
+		}
+
 	}
 }

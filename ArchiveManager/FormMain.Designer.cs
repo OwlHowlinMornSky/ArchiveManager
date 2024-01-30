@@ -172,7 +172,6 @@
 			// 
 			resources.ApplyResources(ListBox_History, "ListBox_History");
 			ListBox_History.FormattingEnabled = true;
-			ListBox_History.Items.AddRange(new object[] { resources.GetString("ListBox_History.Items") });
 			ListBox_History.Name = "ListBox_History";
 			// 
 			// ComboBox_Repository
@@ -262,6 +261,7 @@
 			// 
 			manageRepositoriesToolStripMenuItem.Name = "manageRepositoriesToolStripMenuItem";
 			resources.ApplyResources(manageRepositoriesToolStripMenuItem, "manageRepositoriesToolStripMenuItem");
+			manageRepositoriesToolStripMenuItem.Click += manageRepositoriesToolStripMenuItem_Click;
 			// 
 			// toolStripSeparator1
 			// 
@@ -284,6 +284,7 @@
 			// 
 			renameRepositoryToolStripMenuItem.Name = "renameRepositoryToolStripMenuItem";
 			resources.ApplyResources(renameRepositoryToolStripMenuItem, "renameRepositoryToolStripMenuItem");
+			renameRepositoryToolStripMenuItem.Click += renameRepositoryToolStripMenuItem_Click;
 			// 
 			// toolStripSeparator2
 			// 
@@ -294,6 +295,7 @@
 			// 
 			manageStreamsToolStripMenuItem.Name = "manageStreamsToolStripMenuItem";
 			resources.ApplyResources(manageStreamsToolStripMenuItem, "manageStreamsToolStripMenuItem");
+			manageStreamsToolStripMenuItem.Click += manageStreamsToolStripMenuItem_Click;
 			// 
 			// helpToolStripMenuItem
 			// 
@@ -305,6 +307,7 @@
 			// 
 			aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
 			resources.ApplyResources(aboutToolStripMenuItem, "aboutToolStripMenuItem");
+			aboutToolStripMenuItem.Click += aboutToolStripMenuItem_Click;
 			// 
 			// FolderBrowserDialog_Add
 			// 

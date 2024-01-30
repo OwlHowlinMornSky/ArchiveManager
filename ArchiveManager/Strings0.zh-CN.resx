@@ -132,4 +132,7 @@
   <data name="NoChanges" xml:space="preserve">
     <value>暂无变动</value>
   </data>
+  <data name="NotImplemented" xml:space="preserve">
+    <value>尚未实现。</value>
+  </data>
 </root>
