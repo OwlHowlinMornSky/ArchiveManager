@@ -20,10 +20,34 @@
 *    Tyler Parret True <mysteryworldgod@outlook.com><https://github.com/OwlHowlinMornSky>
 */
 
+using static System.Net.Mime.MediaTypeNames;
+
 namespace ArchiveManager {
 	internal static class GUI {
 
 		internal static FormTest? test;
+
+		internal static Guid repoSelected;
+		internal static Repository repo = new();
+
+		internal static bool CheckStreamName(string name, out string res) {
+			HashSet<char> invalidChars = [];
+			for (int i = 0, n = name.Length; i < n; ++i) {
+				char c = name[i];
+				if (!(('A' <= c && c <= 'Z') || ('a' <= c && c <= 'z') || ('0' <= c && c <= '9') || c == '_' || c == '-')) {
+					invalidChars.Add(c);
+				}
+			}
+			if (invalidChars.Count > 0) {
+				res = name;
+				foreach (char c in invalidChars) {
+					res = res.Replace(c, '-');
+				}
+				return true;
+			}
+			res = name;
+			return false;
+		}
 
 	}
 }

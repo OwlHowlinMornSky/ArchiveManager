@@ -50,32 +50,19 @@ namespace ArchiveManager {
 				return;
 			}
 
-			string leadername = textBox_leadername.Text;
-			{
-				HashSet<char> invalidChars = [];
-				for (int i = 0, n = leadername.Length; i < n; ++i) {
-					char c = leadername[i];
-					if (!(('A' <= c && c <= 'Z') || ('a' <= c && c <= 'z') || ('0' <= c && c <= '9') || c == '_' || c == '-')) {
-						invalidChars.Add(c);
-					}
-				}
-				if (invalidChars.Count > 0) {
-					foreach (char c in invalidChars) {
-						leadername = leadername.Replace(c, '-');
-					}
-					var res = MessageBox.Show(
-						string.Format(
-							StringsNewRepo.ReplaceLeaderName,
-							textBox_leadername.Text,
-							leadername
-						),
-						Text,
-						MessageBoxButtons.OKCancel,
-						MessageBoxIcon.Information
-					);
-					if (res == DialogResult.Cancel)
-						return;
-				}
+			if (GUI.CheckStreamName(textBox_leadername.Text, out string leadername)) {
+				var res = MessageBox.Show(
+					string.Format(
+						StringsNewRepo.ReplaceLeaderName,
+						textBox_leadername.Text,
+						leadername
+					),
+					Text,
+					MessageBoxButtons.OKCancel,
+					MessageBoxIcon.Information
+				);
+				if (res == DialogResult.Cancel)
+					return;
 			}
 
 			Guid guid = Guid.NewGuid();
@@ -86,7 +73,7 @@ namespace ArchiveManager {
 
 			RepoList.Add(new(guid, reponame));
 
-			
+
 			DialogResult = DialogResult.OK;
 			Close();
 		}

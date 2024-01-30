@@ -26,8 +26,6 @@ namespace ArchiveManager {
 		#region Members
 
 		private List<RepoListItem> m_repoList = [];
-		private Guid m_repoSelected;
-		private Repository m_repo = new();
 
 		#endregion
 
@@ -53,7 +51,7 @@ namespace ArchiveManager {
 			int selectedIndex = -1, cnt = 0;
 			foreach (var repo in m_repoList) {
 				ComboBox_Repository.Items.Add(repo.name);
-				if (repo.guid == m_repoSelected) {
+				if (repo.guid == GUI.repoSelected) {
 					selectedIndex = cnt;
 				}
 				cnt++;
@@ -65,9 +63,9 @@ namespace ArchiveManager {
 		}
 
 		private void ClearCurrentRepo() {
-			m_repo.Clear();
+			GUI.repo.Clear();
 			ComboBox_Repository.SelectedIndex = -1;
-			m_repoSelected = new Guid();
+			GUI.repoSelected = new Guid();
 			CheckBox_FromLeader.Visible = false;
 			CheckBox_ToState.Visible = false;
 			CheckedListBox_To.Visible = false;
@@ -85,9 +83,9 @@ namespace ArchiveManager {
 		private void ChangeCurrentRepo(int index) {
 			if (index < 0 || m_repoList.Count <= index)
 				return;
-			if (m_repo.GetGuid() == m_repoList[index].guid)
+			if (GUI.repo.GetGuid() == m_repoList[index].guid)
 				return;
-			if (!m_repo.Load(m_repoList[index])) {
+			if (!GUI.repo.Load(m_repoList[index])) {
 				ClearCurrentRepo();
 				MessageBox.Show(
 					Strings0.Name + ": " + m_repoList[index].name + "\n" +
@@ -102,14 +100,14 @@ namespace ArchiveManager {
 			if (ComboBox_Repository.SelectedIndex != index)
 				ComboBox_Repository.SelectedIndex = index;
 
-			m_repoSelected = m_repoList[index].guid;
+			GUI.repoSelected = m_repoList[index].guid;
 
-			CheckBox_FromLeader.Text = m_repo.GetLeaderName();
+			CheckBox_FromLeader.Text = GUI.repo.GetLeaderName();
 			CheckBox_FromLeader.Visible = true;
 
 			CheckedListBox_To.Items.Clear();
 			{
-				var list = m_repo.GetFollowersName();
+				var list = GUI.repo.GetFollowersName();
 				list.Sort(Util.StrCmpLogicalW);
 				foreach (var f in list)
 					CheckedListBox_To.Items.Add(f);
@@ -135,7 +133,7 @@ namespace ArchiveManager {
 		}
 
 		private void RefreshChange() {
-			var list = m_repo.GetLeaderChanges();
+			var list = GUI.repo.GetLeaderChanges();
 			if (list.Count == 0) {
 				ClearChangeGUI();
 				return;
@@ -158,7 +156,7 @@ namespace ArchiveManager {
 		}
 
 		private void RefreshRealtime() {
-			if (!m_repo.RefreshRealtimeMap())
+			if (!GUI.repo.RefreshRealtimeMap())
 				return;
 			RefreshChange();
 		}
@@ -169,7 +167,7 @@ namespace ArchiveManager {
 
 		private void FormMain_Load(object sender, EventArgs e) {
 			RepoList.Load();
-			m_repoSelected = Settings0.Default.LastSelectedRepo;
+			GUI.repoSelected = Settings0.Default.LastSelectedRepo;
 			UpdateRepoList();
 
 			ListBox_History.Items.Add(Strings0.NotImplemented);
@@ -181,7 +179,7 @@ namespace ArchiveManager {
 
 		private void FormMain_FormClosing(object sender, FormClosingEventArgs e) {
 			RepoList.Save();
-			Settings0.Default.LastSelectedRepo = m_repoSelected;
+			Settings0.Default.LastSelectedRepo = GUI.repoSelected;
 			Settings0.Default.Save();
 		}
 
@@ -241,7 +239,7 @@ namespace ArchiveManager {
 			if (target.Count <= 0)
 				return;
 			//GUI.test?.Show(this);
-			await Task.Run(() => m_repo.Replicate(target));
+			await Task.Run(() => GUI.repo.Replicate(target));
 			//GUI.test?.Close();
 			RefreshRealtime();
 			Button_Replicate.Enabled = true;
@@ -274,7 +272,16 @@ namespace ArchiveManager {
 		}
 
 		private void manageStreamsToolStripMenuItem_Click(object sender, EventArgs e) {
-			NotImplemented();
+			if (!GUI.repo.IsAvailable())
+				return;
+			var dialog = new FormMngStream();
+			var res = dialog.ShowDialog(this);
+			if (res == DialogResult.OK) {
+				var s = GUI.repoSelected;
+				ClearCurrentRepo();
+				GUI.repoSelected = s;
+				UpdateRepoList();
+			}
 		}
 
 		private void aboutToolStripMenuItem_Click(object sender, EventArgs e) {

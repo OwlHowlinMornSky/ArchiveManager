@@ -117,67 +117,97 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="groupBox_leaderStream.Text" xml:space="preserve">
-    <value>Leader Stream</value>
-  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="textBox_leaderpath.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+  <data name="label_reponame.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="&gt;&gt;button_ok.Parent" xml:space="preserve">
-    <value>$this</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="label_reponame.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 9</value>
   </data>
-  <data name="&gt;&gt;textBox_leadername.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="button_ok.Text" xml:space="preserve">
-    <value>OK</value>
-  </data>
-  <data name="&gt;&gt;textBox_reponame.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;label_leadername.Parent" xml:space="preserve">
-    <value>groupBox_leaderStream</value>
-  </data>
-  <data name="&gt;&gt;label_leadername.Name" xml:space="preserve">
-    <value>label_leadername</value>
-  </data>
-  <data name="&gt;&gt;textBox_leadername.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="label_reponame.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 17</value>
   </data>
   <data name="label_reponame.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
+  <data name="label_reponame.Text" xml:space="preserve">
+    <value>Repository Name</value>
   </data>
-  <data name="label_leadername.Text" xml:space="preserve">
-    <value>Name</value>
+  <data name="&gt;&gt;label_reponame.Name" xml:space="preserve">
+    <value>label_reponame</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="&gt;&gt;label_reponame.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label_reponame.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label_reponame.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="textBox_reponame.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 29</value>
+  </data>
+  <data name="textBox_reponame.Size" type="System.Drawing.Size, System.Drawing">
+    <value>380, 23</value>
+  </data>
+  <data name="textBox_reponame.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;textBox_reponame.Name" xml:space="preserve">
+    <value>textBox_reponame</value>
+  </data>
+  <data name="&gt;&gt;textBox_reponame.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBox_reponame.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;textBox_reponame.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="textBox_leaderpath.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 117</value>
+  </data>
   <data name="textBox_leaderpath.Size" type="System.Drawing.Size, System.Drawing">
     <value>280, 23</value>
   </data>
-  <data name="&gt;&gt;m_folderBrowserDialog.Type" xml:space="preserve">
-    <value>System.Windows.Forms.FolderBrowserDialog, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="textBox_leaderpath.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
   </data>
-  <data name="label_leadername.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
+  <data name="&gt;&gt;textBox_leaderpath.Name" xml:space="preserve">
+    <value>textBox_leaderpath</value>
   </data>
-  <data name="&gt;&gt;label_leadername.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;textBox_leaderpath.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;groupBox_leaderStream.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;textBox_leaderpath.Parent" xml:space="preserve">
+    <value>groupBox_leaderStream</value>
   </data>
-  <data name="label_path.Text" xml:space="preserve">
-    <value>Directory</value>
+  <data name="&gt;&gt;textBox_leaderpath.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
-  <data name="label_leadername.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 19</value>
+  <data name="button_leaderbrowse.Location" type="System.Drawing.Point, System.Drawing">
+    <value>299, 117</value>
   </data>
-  <data name="label_leadername.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="button_leaderbrowse.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="button_leaderbrowse.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="button_leaderbrowse.Text" xml:space="preserve">
+    <value>Browse...</value>
+  </data>
+  <data name="&gt;&gt;button_leaderbrowse.Name" xml:space="preserve">
+    <value>button_leaderbrowse</value>
+  </data>
+  <data name="&gt;&gt;button_leaderbrowse.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button_leaderbrowse.Parent" xml:space="preserve">
+    <value>groupBox_leaderStream</value>
   </data>
   <data name="&gt;&gt;button_leaderbrowse.ZOrder" xml:space="preserve">
     <value>3</value>
@@ -185,145 +215,105 @@
   <data name="button_ok.Location" type="System.Drawing.Point, System.Drawing">
     <value>236, 346</value>
   </data>
-  <data name="label_path.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 97</value>
+  <data name="button_ok.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="button_ok.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
   </data>
-  <data name="&gt;&gt;textBox_reponame.Parent" xml:space="preserve">
+  <data name="button_ok.Text" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="&gt;&gt;button_ok.Name" xml:space="preserve">
+    <value>button_ok</value>
+  </data>
+  <data name="&gt;&gt;button_ok.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button_ok.Parent" xml:space="preserve">
     <value>$this</value>
-  </data>
-  <data name="&gt;&gt;button_cancel.Name" xml:space="preserve">
-    <value>button_cancel</value>
   </data>
   <data name="&gt;&gt;button_ok.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>242, 34</value>
+  <data name="button_cancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>317, 346</value>
   </data>
-  <data name="textBox_reponame.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 29</value>
+  <data name="button_cancel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
   </data>
-  <data name="&gt;&gt;textBox_reponame.Name" xml:space="preserve">
-    <value>textBox_reponame</value>
+  <data name="button_cancel.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="button_cancel.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="&gt;&gt;button_cancel.Name" xml:space="preserve">
+    <value>button_cancel</value>
+  </data>
+  <data name="&gt;&gt;button_cancel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button_cancel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;button_cancel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="textBox_leadername.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 56</value>
+  </data>
+  <data name="textBox_leadername.Size" type="System.Drawing.Size, System.Drawing">
+    <value>361, 23</value>
+  </data>
+  <data name="textBox_leadername.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
   </data>
   <data name="&gt;&gt;textBox_leadername.Name" xml:space="preserve">
     <value>textBox_leadername</value>
+  </data>
+  <data name="&gt;&gt;textBox_leadername.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBox_leadername.Parent" xml:space="preserve">
+    <value>groupBox_leaderStream</value>
+  </data>
+  <data name="&gt;&gt;textBox_leadername.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>132, 19</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>242, 34</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
     <value>Any character except 'A'-'Z', 'a'-'z', '-', '_' 
 will be replaced by '-'.</value>
   </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>7, 17</value>
-  </data>
-  <data name="label_reponame.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="textBox_reponame.Size" type="System.Drawing.Size, System.Drawing">
-    <value>380, 23</value>
-  </data>
-  <data name="&gt;&gt;textBox_leaderpath.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label_reponame.Name" xml:space="preserve">
-    <value>label_reponame</value>
-  </data>
-  <data name="&gt;&gt;label_path.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;button_leaderbrowse.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="button_cancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>317, 346</value>
-  </data>
-  <data name="&gt;&gt;textBox_leaderpath.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="button_cancel.Text" xml:space="preserve">
-    <value>Cancel</value>
-  </data>
-  <data name="&gt;&gt;label_leadername.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;m_folderBrowserDialog.Name" xml:space="preserve">
-    <value>m_folderBrowserDialog</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>CenterParent</value>
-  </data>
-  <data name="groupBox_leaderStream.Size" type="System.Drawing.Size, System.Drawing">
-    <value>380, 208</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>404, 381</value>
-  </data>
-  <data name="&gt;&gt;button_ok.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
   </data>
   <data name="&gt;&gt;label1.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;textBox_leaderpath.Parent" xml:space="preserve">
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
     <value>groupBox_leaderStream</value>
-  </data>
-  <data name="&gt;&gt;label_reponame.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="label_reponame.Text" xml:space="preserve">
-    <value>Repository Name</value>
-  </data>
-  <data name="&gt;&gt;groupBox_leaderStream.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;button_leaderbrowse.Name" xml:space="preserve">
-    <value>button_leaderbrowse</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;textBox_leadername.Parent" xml:space="preserve">
-    <value>groupBox_leaderStream</value>
-  </data>
-  <data name="label_reponame.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 17</value>
-  </data>
-  <data name="button_cancel.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;button_cancel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="button_ok.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;label_reponame.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="textBox_leadername.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 56</value>
-  </data>
-  <data name="groupBox_leaderStream.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 71</value>
-  </data>
-  <data name="&gt;&gt;label_reponame.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;groupBox_leaderStream.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
   <data name="label_path.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>132, 19</value>
+  <data name="label_path.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 97</value>
   </data>
   <data name="label_path.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 17</value>
@@ -331,86 +321,71 @@ will be replaced by '-'.</value>
   <data name="label_path.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
   </data>
-  <data name="button_cancel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="button_leaderbrowse.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="button_ok.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="textBox_leadername.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="textBox_reponame.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;textBox_reponame.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>FormNewRepo</value>
-  </data>
-  <data name="&gt;&gt;button_leaderbrowse.Parent" xml:space="preserve">
-    <value>groupBox_leaderStream</value>
-  </data>
-  <data name="&gt;&gt;label_path.Parent" xml:space="preserve">
-    <value>groupBox_leaderStream</value>
-  </data>
-  <data name="button_leaderbrowse.Text" xml:space="preserve">
-    <value>Browse...</value>
-  </data>
-  <data name="groupBox_leaderStream.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;label_path.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="textBox_leaderpath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 117</value>
-  </data>
-  <data name="button_leaderbrowse.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>groupBox_leaderStream</value>
+  <data name="label_path.Text" xml:space="preserve">
+    <value>Directory</value>
   </data>
   <data name="&gt;&gt;label_path.Name" xml:space="preserve">
     <value>label_path</value>
   </data>
-  <data name="button_leaderbrowse.Location" type="System.Drawing.Point, System.Drawing">
-    <value>299, 117</value>
+  <data name="&gt;&gt;label_path.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;textBox_leaderpath.Name" xml:space="preserve">
-    <value>textBox_leaderpath</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>New Repository</value>
-  </data>
-  <data name="&gt;&gt;groupBox_leaderStream.Name" xml:space="preserve">
+  <data name="&gt;&gt;label_path.Parent" xml:space="preserve">
     <value>groupBox_leaderStream</value>
+  </data>
+  <data name="&gt;&gt;label_path.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label_leadername.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label_leadername.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 19</value>
   </data>
   <data name="label_leadername.Size" type="System.Drawing.Size, System.Drawing">
     <value>43, 17</value>
   </data>
-  <data name="textBox_leadername.Size" type="System.Drawing.Size, System.Drawing">
-    <value>361, 23</value>
+  <data name="label_leadername.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
   </data>
-  <data name="&gt;&gt;button_cancel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="label_leadername.Text" xml:space="preserve">
+    <value>Name</value>
   </data>
-  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;label_leadername.Name" xml:space="preserve">
+    <value>label_leadername</value>
   </data>
-  <data name="&gt;&gt;button_ok.Name" xml:space="preserve">
-    <value>button_ok</value>
+  <data name="&gt;&gt;label_leadername.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;button_cancel.Parent" xml:space="preserve">
+  <data name="&gt;&gt;label_leadername.Parent" xml:space="preserve">
+    <value>groupBox_leaderStream</value>
+  </data>
+  <data name="&gt;&gt;label_leadername.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="groupBox_leaderStream.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 71</value>
+  </data>
+  <data name="groupBox_leaderStream.Size" type="System.Drawing.Size, System.Drawing">
+    <value>380, 208</value>
+  </data>
+  <data name="groupBox_leaderStream.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="groupBox_leaderStream.Text" xml:space="preserve">
+    <value>Leader Stream</value>
+  </data>
+  <data name="&gt;&gt;groupBox_leaderStream.Name" xml:space="preserve">
+    <value>groupBox_leaderStream</value>
+  </data>
+  <data name="&gt;&gt;groupBox_leaderStream.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox_leaderStream.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="label_reponame.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 9</value>
+  <data name="&gt;&gt;groupBox_leaderStream.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="m_folderBrowserDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -421,4 +396,29 @@ will be replaced by '-'.</value>
   <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 17</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>404, 381</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterParent</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>New Repository</value>
+  </data>
+  <data name="&gt;&gt;m_folderBrowserDialog.Name" xml:space="preserve">
+    <value>m_folderBrowserDialog</value>
+  </data>
+  <data name="&gt;&gt;m_folderBrowserDialog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FolderBrowserDialog, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FormNewRepo</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

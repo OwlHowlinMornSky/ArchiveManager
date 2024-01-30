@@ -131,6 +131,10 @@ namespace ArchiveManager {
 			doc.Save(Path.Combine(m_myDir, Attribute0.Default.RepoFileName));
 		}
 
+		public bool IsAvailable() {
+			return m_available;
+		}
+
 		public void Rename(string newname) {
 			if (!m_available)
 				return;
@@ -150,6 +154,16 @@ namespace ArchiveManager {
 			if (m_leader == oldname) {
 				m_leader = newname;
 			}
+			Save();
+		}
+
+		public bool AddFollower(string name, string path) {
+			var res = m_streamList.TryAdd(name, path);
+			if (res) {
+				SaveStorage(name, []);
+				Save();
+			}
+			return res;
 		}
 
 		public Guid GetGuid() {

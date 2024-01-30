@@ -89,13 +89,13 @@
 			// 
 			// groupBox_leaderStream
 			// 
-			resources.ApplyResources(groupBox_leaderStream, "groupBox_leaderStream");
 			groupBox_leaderStream.Controls.Add(label_path);
 			groupBox_leaderStream.Controls.Add(label_leadername);
 			groupBox_leaderStream.Controls.Add(label1);
 			groupBox_leaderStream.Controls.Add(button_leaderbrowse);
 			groupBox_leaderStream.Controls.Add(textBox_leadername);
 			groupBox_leaderStream.Controls.Add(textBox_leaderpath);
+			resources.ApplyResources(groupBox_leaderStream, "groupBox_leaderStream");
 			groupBox_leaderStream.Name = "groupBox_leaderStream";
 			groupBox_leaderStream.TabStop = false;
 			// 
@@ -109,14 +109,12 @@
 			resources.ApplyResources(label_leadername, "label_leadername");
 			label_leadername.Name = "label_leadername";
 			// 
-			// m_folderBrowserDialog
-			// 
-			resources.ApplyResources(m_folderBrowserDialog, "m_folderBrowserDialog");
-			// 
 			// FormNewRepo
 			// 
+			AcceptButton = button_ok;
 			resources.ApplyResources(this, "$this");
 			AutoScaleMode = AutoScaleMode.Font;
+			CancelButton = button_cancel;
 			Controls.Add(groupBox_leaderStream);
 			Controls.Add(button_cancel);
 			Controls.Add(button_ok);

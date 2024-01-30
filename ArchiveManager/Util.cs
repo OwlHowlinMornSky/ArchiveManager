@@ -27,5 +27,28 @@ namespace ArchiveManager {
 	internal static partial class Util {
 		[LibraryImport("shlwapi.dll", EntryPoint = "StrCmpLogicalW", StringMarshalling = StringMarshalling.Utf16)]
 		public static partial int StrCmpLogicalW(string psz1, string psz2);
+
+		public enum BeepType : int {
+			SimpleBeep = -1, // 0xFFFFFFFF 一个简单的哔哔声 如果声卡不可用，则使用扬声器生成声音。
+
+			MB_OK = 0x00000000, // 指定为 Windows 默认蜂鸣声的声音。 
+
+			MB_ICONERROR = 0x00000010, // 指定为 Windows 严重停止声音的声音。
+			MB_ICONHAND = 0x00000010, // 请参阅 MB_ICONERROR。
+			MB_ICONSTOP = 0x00000010, // 请参阅 MB_ICONERROR。
+
+			MB_ICONQUESTION = 0x00000020, // 指定为 Windows 问题声音的声音。
+
+			MB_ICONWARNING = 0x00000030, // 指定为 Windows 感叹号的声音。
+			MB_ICONEXCLAMATION = 0x00000030, // 请参阅 MB_ICONWARNING。
+
+			MB_ICONINFORMATION = 0x00000040, // 指定为 Windows 星号声音的声音。
+			MB_ICONASTERISK = 0x00000040, // 请参阅 MB_ICONINFORMATION。
+		}
+
+		[LibraryImport("User32.dll", EntryPoint = "MessageBeep")]
+		[return: MarshalAs(UnmanagedType.Bool)]
+		public static partial bool MessageBeep(BeepType type);
+
 	}
 }
