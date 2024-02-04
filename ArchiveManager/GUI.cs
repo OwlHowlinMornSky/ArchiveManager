@@ -27,9 +27,21 @@ namespace ArchiveManager {
 
 		internal static FormTest? test;
 
+		/// <summary>
+		/// 当前选中的仓库。
+		/// </summary>
 		internal static Guid repoSelected;
+		/// <summary>
+		/// 主ui使用的实例。
+		/// </summary>
 		internal static Repository repo = new();
 
+		/// <summary>
+		/// 检查流名称，修改为替换的串。
+		/// </summary>
+		/// <param name="name">输入的名称</param>
+		/// <param name="res">输出的名称</param>
+		/// <returns>是否有更改</returns>
 		internal static bool CheckStreamName(string name, out string res) {
 			HashSet<char> invalidChars = [];
 			for (int i = 0, n = name.Length; i < n; ++i) {

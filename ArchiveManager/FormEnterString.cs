@@ -11,9 +11,17 @@ using System.Windows.Forms;
 namespace ArchiveManager {
 	public partial class FormEnterString : Form {
 
+		/// <summary>
+		/// 显示的窗口标题。请在new之后写入。
+		/// </summary>
 		public string? ui_title;
+		/// <summary>
+		/// 显示的提示内容。请在new之后写入。
+		/// </summary>
 		public string? ui_main;
-
+		/// <summary>
+		/// 最终文本框的内容。
+		/// </summary>
 		public string? str_result;
 
 		public FormEnterString() {
@@ -28,7 +36,7 @@ namespace ArchiveManager {
 		}
 
 		private void button_ok_Click(object sender, EventArgs e) {
-			if (textBox_main.Text.Length <= 0) {
+			if (textBox_main.Text.Length <= 0) { // 必须在文本框写入内容。
 				textBox_main.Focus();
 				Util.MessageBeep(Util.BeepType.MB_ICONERROR);
 				return;

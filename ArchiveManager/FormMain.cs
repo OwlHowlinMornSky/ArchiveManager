@@ -25,6 +25,9 @@ namespace ArchiveManager {
 
 		#region Members
 
+		/// <summary>
+		/// 缓存列表。
+		/// </summary>
 		private List<RepoListItem> m_repoList = [];
 
 		#endregion
@@ -35,6 +38,9 @@ namespace ArchiveManager {
 			InitializeComponent();
 		}
 
+		/// <summary>
+		/// 显示一个提示“尚未实现”的消息框。
+		/// </summary>
 		private void NotImplemented() {
 			MessageBox.Show(
 				Strings0.NotImplemented,
@@ -44,6 +50,9 @@ namespace ArchiveManager {
 			);
 		}
 
+		/// <summary>
+		/// 更新仓库列表。并写入左上角combobox。
+		/// </summary>
 		private void UpdateRepoList() {
 			ComboBox_Repository.Items.Clear();
 			m_repoList = RepoList.GetAll();
@@ -62,6 +71,9 @@ namespace ArchiveManager {
 			}
 		}
 
+		/// <summary>
+		/// 清除当前的仓库，包括显示的ui内容、选中仓库的guid。
+		/// </summary>
 		private void ClearCurrentRepo() {
 			GUI.repo.Clear();
 			ComboBox_Repository.SelectedIndex = -1;
@@ -74,12 +86,19 @@ namespace ArchiveManager {
 			ClearChangeGUI();
 		}
 
+		/// <summary>
+		/// 重置变动ui。
+		/// </summary>
 		private void ClearChangeGUI() {
 			TextBox_ViewTitle.Text = Strings0.NoChanges;
 			TextBox_ViewInfo.Text = "";
 			ListBox_Changes.Items.Clear();
 		}
 
+		/// <summary>
+		/// 更改选中仓库。
+		/// </summary>
+		/// <param name="index">与缓存列表和combobox一致的序号</param>
 		private void ChangeCurrentRepo(int index) {
 			if (index < 0 || m_repoList.Count <= index)
 				return;
@@ -121,6 +140,10 @@ namespace ArchiveManager {
 			RefreshRealtime();
 		}
 
+		/// <summary>
+		/// 全选随流。
+		/// </summary>
+		/// <param name="check">选中还是取消</param>
 		private void ChooseAll(bool check) {
 			if (CheckedListBox_To.Items.Count > 0) {
 				for (int i = 0, n = CheckedListBox_To.Items.Count; i < n; ++i)
@@ -132,6 +155,9 @@ namespace ArchiveManager {
 			}
 		}
 
+		/// <summary>
+		/// 重新写入更改ui。
+		/// </summary>
 		private void RefreshChange() {
 			var list = GUI.repo.GetLeaderChanges();
 			if (list.Count == 0) {
@@ -155,6 +181,9 @@ namespace ArchiveManager {
 			TextBox_ViewTitle.Text = string.Format(Strings0.FileChanges, list.Count);
 		}
 
+		/// <summary>
+		/// 刷新领流当前更改并更新ui。
+		/// </summary>
 		private void RefreshRealtime() {
 			if (!GUI.repo.RefreshRealtimeMap())
 				return;
@@ -253,8 +282,6 @@ namespace ArchiveManager {
 			RefreshRealtime();
 		}
 
-		#endregion
-
 		private void newRepositoryToolStripMenuItem_Click(object sender, EventArgs e) {
 			var dialog = new FormNewRepo();
 			var res = dialog.ShowDialog(this);
@@ -287,6 +314,8 @@ namespace ArchiveManager {
 		private void aboutToolStripMenuItem_Click(object sender, EventArgs e) {
 			
 		}
+
+		#endregion
 
 	}
 }

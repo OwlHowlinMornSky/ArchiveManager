@@ -26,26 +26,54 @@ namespace ArchiveManager {
 
 		private static Dictionary<Guid, RepoListItem> repoList = [];
 
+		/// <summary>
+		/// 添加仓库记录。
+		/// </summary>
+		/// <param name="repository">仓库记录</param>
+		/// <returns>添加是否成功</returns>
 		public static bool Add(RepoListItem repository) {
 			return repoList.TryAdd(repository.guid, repository);
 		}
 
+		/// <summary>
+		/// 移除指定仓库记录。
+		/// </summary>
+		/// <param name="repo">指定仓库记录</param>
+		/// <returns>是否存在指定仓库记录</returns>
 		public static bool Remove(RepoListItem repo) {
-			return repoList.Remove(repo.guid);
+			return Remove(repo.guid);
 		}
 
+		/// <summary>
+		/// 移除指定仓库记录。
+		/// </summary>
+		/// <param name="guid">指定仓库记录的guid</param>
+		/// <returns>是否存在指定仓库记录</returns>
 		public static bool Remove(Guid guid) {
 			return repoList.Remove(guid);
 		}
 
+		/// <summary>
+		/// 获取指定仓库的记录。
+		/// </summary>
+		/// <param name="guid">指定仓库的guid</param>
+		/// <param name="value">输出的仓库记录</param>
+		/// <returns>是否存在指定的仓库记录</returns>
 		public static bool Get(Guid guid, out RepoListItem value) {
 			return repoList.TryGetValue(guid, out value);
 		}
 
+		/// <summary>
+		/// 获取所有仓库记录的list。
+		/// </summary>
+		/// <returns>list</returns>
 		public static List<RepoListItem> GetAll() {
 			return repoList.Select(pair => pair.Value).ToList();
 		}
 
+		/// <summary>
+		/// 从文件加载仓库列表。
+		/// </summary>
 		public static void Load() {
 			try {
 				var doc = XDocument.Load(Path.Combine(Attribute0.Default.RepoDirectory, Attribute0.Default.ListFileName));
@@ -65,6 +93,9 @@ namespace ArchiveManager {
 			}
 		}
 
+		/// <summary>
+		/// 保存到文件。
+		/// </summary>
 		public static void Save() {
 			var doc = new XDocument(
 				new XElement(Attribute0.Default.ListRootNote,

@@ -21,16 +21,21 @@
 */
 
 namespace ArchiveManager {
+	/// <summary>
+	/// 一项文件变动
+	/// </summary>
+	/// <param name="_type">变动类型</param>
+	/// <param name="_path">相对路径</param>
 	internal readonly struct FileChange(FileChange.Type _type, string _path) {
 		public enum Type {
-			Unknown = 0,
-			Add,
-			Modified,
-			Deleted
+			Unknown = 0, // 空
+			Add,         // 文件被新建
+			Modified,    // 文件有修改
+			Deleted      // 文件被删除
 		}
 
 		public readonly Type type = _type;
-		public readonly string path = _path;
+		public readonly string path = _path; // 变动的文件路径（相对于流目录）。
 
 	}
 }

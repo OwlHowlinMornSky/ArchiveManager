@@ -20,6 +20,11 @@
 *    Tyler Parret True <mysteryworldgod@outlook.com><https://github.com/OwlHowlinMornSky>
 */
 namespace ArchiveManager {
+	/// <summary>
+	/// 一项仓库记录。
+	/// </summary>
+	/// <param name="_guid">guid</param>
+	/// <param name="_name">仓库名称</param>
 	internal struct RepoListItem(Guid _guid, string _name = "") {
 		public readonly Guid guid = _guid;
 		public string name = _name;
