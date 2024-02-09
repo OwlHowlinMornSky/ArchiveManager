@@ -2,6 +2,12 @@
 
 帮助管理资料副本的简单程序
 
+## 已存档 Archived
+
+### 原因 Reason
+
+感觉……不如 [FreeFileSync](https://freefilesync.org/) ……。
+
 ## 作用
 
 可以建立多个 `仓库` ，每个仓库都可以一键将 一个`领流(Leader Stream)` 的变动覆写到 另外数个`随流(Follower Streams)` 。
